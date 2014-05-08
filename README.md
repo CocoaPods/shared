@@ -1,0 +1,4 @@
+shared
+======
+
+Shared CocoaPods resources
