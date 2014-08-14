@@ -35,7 +35,7 @@ begin
 
   if RUBY_VERSION >= '1.9.3'
     require 'rubocop/rake_task'
-    Rubocop::RakeTask.new
+    RuboCop::RakeTask.new
   end
 
 rescue LoadError
@@ -43,6 +43,9 @@ rescue LoadError
     '[!] Some Rake tasks haven been disabled because the environment' \
     ' couldn’t be loaded. Be sure to run `rake bootstrap` first.' \
     "\e[0m"
+  $stderr.puts e.message
+  $stderr.puts e.backtrace
+  $stderr.puts
 end
 
 #-- Helpers ------------------------------------------------------------------#
