@@ -31,6 +31,13 @@ begin
     Rake::Task['rubocop'].invoke if RUBY_VERSION >= '1.9.3'
   end
 
+  #-- Kick -------------------------------------------------------------------#
+
+  desc 'Automatically run specs for updated files'
+  task :kick do
+    exec 'bundle exec kicker -c'
+  end
+
   #-- RuboCop ----------------------------------------------------------------#
 
   if RUBY_VERSION >= '1.9.3'
