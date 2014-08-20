@@ -31,7 +31,7 @@ begin
     Rake::Task['rubocop'].invoke if RUBY_VERSION >= '1.9.3'
   end
 
-  #-- Rubocop ----------------------------------------------------------------#
+  #-- RuboCop ----------------------------------------------------------------#
 
   if RUBY_VERSION >= '1.9.3'
     require 'rubocop/rake_task'
