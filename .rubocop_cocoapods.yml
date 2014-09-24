@@ -21,6 +21,10 @@ SignalException:
 AssignmentInCondition:
   Enabled: false
 
+# They are idiomatic and don't require use of the `english` module
+SpecialGlobalVars:
+  Enabled: false
+
 # Allow backticks
 AsciiComments:
   Enabled: false
