@@ -50,22 +50,8 @@ GuardClause:
 Next:
   Enabled: false
 
-#- CocoaPods support for Ruby 1.8.7 ------------------------------------------#
-
 HashSyntax:
   EnforcedStyle: hash_rockets
-
-Lambda:
-  Enabled: false
-
-DotPosition:
-  EnforcedStyle: trailing
-
-EachWithObject:
-  Enabled: false
-
-Style/SpecialGlobalVars:
-  Enabled: false
 
 #- CocoaPods specs -----------------------------------------------------------#
 
