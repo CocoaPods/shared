@@ -1,8 +1,9 @@
 require 'octokit'
 
-dry_run = false
-token = ''
+token_file = File.expand_path("../../.github_access_token", File.dirname(__FILE__))
+token = File.file?(token_file) ? File.read(token_file).strip : ''
 repo_slug = ARGV.first
+dry_run = ARGV.include?('--dry-run')
 
 unless repo_slug
   puts "[!] A repo slug is required"
@@ -15,6 +16,7 @@ LABELS = {
   "t1:enhancement" => "02AFE1",
   "t2:defect" => "6902E1",
   "t3:discussion" => "E10288",
+  "t4:internal" => "0D00D9",
 
   # Status
   "s1:awaiting input" => "EDCE24",
@@ -63,7 +65,7 @@ labels.each do |label|
     missing.delete(name)
     color = LABELS[name]
     if label.name == name && label.color == color
-      puts "- ok"
+      puts "- 👍 `#{label.name}`"
     else
       options = {}
       if label.name != name
@@ -79,7 +81,7 @@ labels.each do |label|
       client.update_label(repo_slug, label.name, options) unless dry_run
     end
   else
-    puts "- deleting the label"
+    puts "- deleting `#{label.name}`"
     client.delete_label!(repo_slug, label.name, {}) unless dry_run
   end
 end
