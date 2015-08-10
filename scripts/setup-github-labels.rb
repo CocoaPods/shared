@@ -1,7 +1,7 @@
 require 'octokit'
 
 token_file = File.expand_path("../../.github_access_token", File.dirname(__FILE__))
-token = File.file?(token_file) ? File.read(token_file).strip : ''
+token = File.file?(token_file) ? File.read(token_file).strip : ENV['GITHUB_API_TOKEN']
 repo_slug = ARGV.first
 dry_run = ARGV.include?('--dry-run')
 
