@@ -17,6 +17,7 @@ LABELS = {
   "t2:defect" => "6902E1",
   "t3:discussion" => "E10288",
   "t4:internal" => "0D00D9",
+  "t5:plugin idea" => "D4C5F9",
 
   # Status
   "s1:awaiting input" => "EDCE24",
@@ -33,6 +34,9 @@ LABELS = {
 
   # Priority
   "★" => "C7C1C1",
+
+  # Other
+  "Frameworks" => "E11D21",
 }
 
 MAPPINGS = {
