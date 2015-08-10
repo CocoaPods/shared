@@ -1,7 +1,7 @@
 require 'octokit'
 
 token_file = File.expand_path("../../.github_access_token", File.dirname(__FILE__))
-token = File.file?(token_file) ? File.read(token_file).strip : ''
+token = File.file?(token_file) ? File.read(token_file).strip : ENV['GITHUB_API_TOKEN']
 repo_slug = ARGV.first
 dry_run = ARGV.include?('--dry-run')
 
@@ -17,6 +17,7 @@ LABELS = {
   "t2:defect" => "6902E1",
   "t3:discussion" => "E10288",
   "t4:internal" => "0D00D9",
+  "t5:plugin idea" => "D4C5F9",
 
   # Status
   "s1:awaiting input" => "EDCE24",
@@ -24,6 +25,7 @@ LABELS = {
   "s3:detailed" => "E28C2C",
   "s4:awaiting validation" => "F97D27",
   "s5:blocked" => "684324",
+  "s6:pr exists" => "FAD8C7",
 
   # Difficulty
   "d1:easy" => "00B952",
@@ -32,6 +34,9 @@ LABELS = {
 
   # Priority
   "★" => "C7C1C1",
+
+  # Other
+  "frameworks" => "E11D21",
 }
 
 MAPPINGS = {
