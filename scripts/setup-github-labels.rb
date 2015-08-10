@@ -25,7 +25,7 @@ LABELS = {
   "s3:detailed" => "E28C2C",
   "s4:awaiting validation" => "F97D27",
   "s5:blocked" => "684324",
-  "s6:PR exists" => "FAD8C7",
+  "s6:pr exists" => "FAD8C7",
 
   # Difficulty
   "d1:easy" => "00B952",
@@ -36,7 +36,7 @@ LABELS = {
   "★" => "C7C1C1",
 
   # Other
-  "Frameworks" => "E11D21",
+  "frameworks" => "E11D21",
 }
 
 MAPPINGS = {
