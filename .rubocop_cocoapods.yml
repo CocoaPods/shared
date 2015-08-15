@@ -59,6 +59,11 @@ Next:
 Metrics/ClassLength:
   Enabled: false
 
+# Arbitrary max lengths for modules simply do not work and enabling this will
+# lead to a never ending stream of annoyance and changes.
+Metrics/ModuleLength:
+  Enabled: false
+
 # Arbitrary max lengths for methods simply do not work and enabling this will
 # lead to a never ending stream of annoyance and changes.
 Metrics/MethodLength:
@@ -114,4 +119,3 @@ ClassAndModuleChildren:
 UselessComparison:
   Exclude:
     - spec/**/*
-
