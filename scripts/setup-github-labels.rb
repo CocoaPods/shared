@@ -19,7 +19,7 @@ LABELS = {
   "t4:internal" => "0D00D9",
 
   # Status
-  "s1:awaiting input" => "EDCE24",
+  "s1:awaiting_input" => "EDCE24",
   "s2:confirmed" => "E2A72C",
   "s3:detailed" => "E28C2C",
   "s4:awaiting validation" => "F97D27",
@@ -37,7 +37,8 @@ LABELS = {
 MAPPINGS = {
   "feature" => "t1:enhancement",
   "bug" => "t2:defect",
-  "awaiting response" => "s1:awaiting input",
+  "awaiting response" => "s1:awaiting_input",
+  "s1:awaiting input" => "s1:awaiting_input",
   "question" => "t3:discussion",
   "easy first step" => "d1:easy",
 }
