@@ -6,7 +6,7 @@ AllCops:
     - lib/**/*.rb
     - Rakefile
     - Gemfile
-    - /*.gemspec
+    - "*.gemspec"
   Exclude:
     - spec/fixtures/**/*
     - vendor/bundle/**/*
